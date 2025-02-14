@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11"> <script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=i.length;r<a;r++)ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"))}for(var n=document.querySelectorAll("video"),r=0,a=n.length;r<a;r++)ewwwAttr(n[r],"poster",e?n[r].getAttribute("data-poster-webp"):n[r].getAttribute("data-poster-image"));for(var o,l=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=l.length;r<a;r++)e&&(ewwwAttr(l[r],"data-lazy-srcset",l[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(l[r],"data-srcset",l[r].getAttribute("data-srcset-webp")),ewwwAttr(l[r],"data-lazy-src",l[r].getAttribute("data-lazy-src-webp")),ewwwAttr(l[r],"data-src",l[r].getAttribute("data-src-webp")),ewwwAttr(l[r],"data-orig-file",l[r].getAttribute("data-webp-orig-file")),ewwwAttr(l[r],"data-medium-file",l[r].getAttribute("data-webp-medium-file")),ewwwAttr(l[r],"data-large-file",l[r].getAttribute("data-webp-large-file")),null!=(o=l[r].getAttribute("srcset"))&&!1!==o&&o.includes("R0lGOD")&&ewwwAttr(l[r],"src",l[r].getAttribute("data-lazy-src-webp"))),l[r].className=l[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var s=document.querySelectorAll(".ewww_webp"),r=0,a=s.length;r<a;r++)e?(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file")),ewwwAttr(s[r],"data-large_image",s[r].getAttribute("data-webp-large_image")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-webp-src"))):(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-img")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-img"))),s[r].className=s[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><link media="all" href="/wp-content/cache/autoptimize/css/autoptimize_d0da7f6895bbd72ca0ab990fed5cb82c.css" rel="stylesheet">
+<title>Hàm LAG và LEAD trong SQL &#8211; Tuan | ANALYTIC</title> <script type="cee460d1067b67e46917fdc2-text/javascript">function theChampLoadEvent(e){var t=window.onload;if(typeof window.onload!="function"){window.onload=e}else{window.onload=function(){t();e()}}}</script> <script type="cee460d1067b67e46917fdc2-text/javascript">var theChampDefaultLang = 'en_US', theChampCloseIconPath = '/wp-content/plugins/super-socializer/images/close.png';</script> <script type="cee460d1067b67e46917fdc2-text/javascript">var theChampSiteUrl = '', theChampVerified = 0, theChampEmailPopup = 0, heateorSsMoreSharePopupSearchText = 'Search';</script> <script type="cee460d1067b67e46917fdc2-text/javascript">var theChampFBKey = '', theChampFBLang = 'en_US', theChampFbLikeMycred = 0, theChampSsga = 0, theChampCommentNotification = 0, theChampHeateorFcmRecentComments = 0, theChampFbIosLogin = 0;</script> <script type="cee460d1067b67e46917fdc2-text/javascript">var theChampFBCommentUrl = '/ham-lag-va-lead-trong-sq/'; var theChampFBCommentColor = 'light'; var theChampFBCommentNumPosts = ''; var theChampFBCommentWidth = '100%'; var theChampFBCommentOrderby = 'social'; var theChampCommentingTabs = "facebook,twitter", theChampGpCommentsUrl = '/ham-lag-va-lead-trong-sq/', theChampDisqusShortname = 'disqus', theChampScEnabledTabs = 'fb', theChampScLabel = 'Comment area', theChampScTabLabels = {"wordpress":"Default Comments (0)","fb":"Facebook Comments","disqus":"Disqus Comments"}, theChampGpCommentsWidth = 0, theChampCommentingId = 'respond'</script> <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="/ham-lag-va-lead-trong-sq/">
+<meta name="description" content="Hôm nay mình sẽ hướng dẫn các bạn sử dụng Hàm LAG và Hàm LEAD với ví dụ cụ thể để truy vấn dữ liệu theo dạng time-series ( dòng thời gian ). Định nghĩa Hàm LAG">
+<meta property="og:title" content="Hàm LAG và LEAD trong SQL &#8211; Tuan | ANALYTIC">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/wp-content/uploads/2021/08/download.png">
+<meta property="og:image:alt" content="Hàm LAG và LEAD trong SQL">
+<meta property="og:description" content="Hôm nay mình sẽ hướng dẫn các bạn sử dụng Hàm LAG và Hàm LEAD với ví dụ cụ thể để truy vấn dữ liệu theo dạng time-series ( dòng thời gian ). Định nghĩa Hàm LAG">
+<meta property="og:url" content="/ham-lag-va-lead-trong-sq/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tuan | ANALYTIC">
+<meta property="article:published_time" content="2021-06-27T07:20:40+00:00">
+<meta property="article:modified_time" content="2021-08-17T02:09:24+00:00">
+<meta property="og:updated_time" content="2021-08-17T02:09:24+00:00">
+<meta property="article:section" content="CSDL - Database">
+<meta property="article:tag" content="data analysis">
+<meta property="article:tag" content="data visualization">
+<meta property="article:tag" content="dataanalytics">
+<meta property="article:tag" content="database">
+<meta property="article:tag" content="lag">
+<meta property="article:tag" content="lead">
+<meta property="article:tag" content="sql">
+<meta property="article:tag" content="tự học data analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/wp-content/uploads/2021/08/download.png">
+<meta name="author" content="Tuan">
+<meta name="date" content="2021-06-27T07:20:40+00:00">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+<link href="https://fonts.gstatic.com/" crossorigin="anonymous" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Tuan | ANALYTIC &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuan | ANALYTIC &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuan | ANALYTIC &raquo; Hàm LAG và LEAD trong SQL Comments Feed" href="/ham-lag-va-lead-trong-sq/feed/"> <script type="cee460d1067b67e46917fdc2-text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);</script> <!--[if IE]> <script src="/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.0.2" id="astra-flexibility-js"></script> <script id="astra-flexibility-js-after">flexibility(document.documentElement);</script> <![endif]--><link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/649">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.2">
+<link rel="shortlink" href="/?p=649">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fham-lag-va-lead-trong-sq%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fham-lag-va-lead-trong-sq%2F#038;format=xml">
+<meta property="og:image" content="/wp-content/uploads/2021/08/download.png">
+<meta name="twitter:image" content="/wp-content/uploads/2021/08/download.png">
+<meta name="generator" content="Site Kit by Google 1.146.0">
+<link rel="pingback" href="/xmlrpc.php">
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC82V5Z406" type="cee460d1067b67e46917fdc2-text/javascript"></script> <script type="cee460d1067b67e46917fdc2-text/javascript">window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CC82V5Z406');</script>  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5877339755641507&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous" type="cee460d1067b67e46917fdc2-text/javascript"></script> <link rel="icon" href="/wp-content/uploads/2021/06/cropped-logo_version-32x32.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2021/06/cropped-logo_version-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2021/06/cropped-logo_version-180x180.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2021/06/cropped-logo_version-270x270.png">
+</head>
+<body itemtype="https://schema.org/Blog" itemscope="itemscope" class="post-template-default single single-post postid-649 single-format-standard ast-desktop ast-separate-container ast-right-sidebar astra-4.0.2 ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled">
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script> <a class="skip-link screen-reader-text" href="#content" role="link" title="Skip to content"> Skip to content</a><div class="hfeed site" id="page">
+<header class="site-header header-main-layout-1 ast-primary-menu-enabled ast-logo-title-inline ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead"><div id="ast-desktop-header" data-toggle-type="dropdown">
+<div class="ast-main-header-wrap main-header-bar-wrap "><div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder"><div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder"><div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left"><div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline"><div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"><div class="ast-site-title-wrap"> <span class="site-title" itemprop="name"> <a href="/" rel="home" itemprop="url"> Tuan | ANALYTIC </a> </span>
+</div></div></div></div>
+<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section"><div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1"><div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile">
+<li id="menu-item-169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-169"><a href="/" class="menu-link">Trang chủ</a></li>
+<li id="menu-item-464" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-464">
+<a href="/category/analytic-vi/" class="menu-link">Phân tích dữ liệu<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu"><li id="menu-item-465" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-465"><a href="/category/analytic-vi/csdl-database/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>CSDL &#8211; Database</a></li></ul>
+</li>
+<li id="menu-item-168" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-168"><a href="/category/sql/" class="menu-link">Về SQL</a></li>
+<li id="menu-item-624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-624"><a href="/category/python/" class="menu-link">Python</a></li>
+<li id="menu-item-165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165"><a href="/category/visualization-vi/" class="menu-link">Vẽ đồ thị</a></li>
+<li id="menu-item-170" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-170">
+<a href="/category/career-vi/" class="menu-link">Công việc<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu"><li id="menu-item-919" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-919"><a href="/category/career-vi/tuyen-dung/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>Tuyển Dụng</a></li></ul>
+</li>
+<li id="menu-item-166" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-166">
+<a href="/category/business/" class="menu-link">Kinh Doanh<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu">
+<li id="menu-item-585" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-585"><a href="/category/seo/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>SEO</a></li>
+<li id="menu-item-167" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-167"><a href="/category/business/social/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>Mạng Xã Hội</a></li>
+</ul>
+</li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="/about/" class="menu-link">Who is TUAN</a></li>
+<li id="menu-item-750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750"><a href="/hire-me/" class="menu-link">Dịch vụ của Tuấn</a></li>
+<li id="menu-item-685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="/donate/" class="menu-link">DONATE</a></li>
+</ul></div></nav></div></div></div></div>
+</div></div></div></div>
+<div class="ast-desktop-header-content content-align-flex-start "></div>
+</div>
+<div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
+<div class="ast-main-header-wrap main-header-bar-wrap"><div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder"><div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left"><div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline"><div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"><div class="ast-site-title-wrap"> <span class="site-title" itemprop="name"> <a href="/" rel="home" itemprop="url"> Tuan | ANALYTIC </a> </span>
+</div></div></div></div>
+<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section"><div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="section-header-mobile-trigger"><div class="ast-button-wrap"> <button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal" aria-expanded="false"> <span class="screen-reader-text">Main Menu</span> <span class="mobile-menu-toggle-icon"> <span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-menu-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"></path></svg></span><span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-close-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></span> </span> </button>
+</div></div></div>
+</div></div></div>
+<div class="ast-mobile-header-content content-align-flex-start "><div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu"><div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-169"><a href="/" class="menu-link">Trang chủ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-464">
+<a href="/category/analytic-vi/" class="menu-link">Phân tích dữ liệu<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-465"><a href="/category/analytic-vi/csdl-database/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>CSDL &#8211; Database</a></li></ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-168"><a href="/category/sql/" class="menu-link">Về SQL</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-624"><a href="/category/python/" class="menu-link">Python</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165"><a href="/category/visualization-vi/" class="menu-link">Vẽ đồ thị</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-170">
+<a href="/category/career-vi/" class="menu-link">Công việc<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-919"><a href="/category/career-vi/tuyen-dung/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>Tuyển Dụng</a></li></ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-166">
+<a href="/category/business/" class="menu-link">Kinh Doanh<span role="presentation" class="dropdown-menu-toggle"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></span></a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span></button><ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-585"><a href="/category/seo/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>SEO</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-167"><a href="/category/business/social/" class="menu-link"><span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span>Mạng Xã Hội</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="/about/" class="menu-link">Who is TUAN</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750"><a href="/hire-me/" class="menu-link">Dịch vụ của Tuấn</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="/donate/" class="menu-link">DONATE</a></li>
+</ul></div></nav></div></div></div></div>
+</div></header><div id="content" class="site-content"><div class="ast-container">
+<div id="primary" class="content-area primary"><main id="main" class="site-main"><article class="post-649 post type-post status-publish format-standard has-post-thumbnail hentry category-csdl-database category-database category-analytic-vi category-sql tag-data-analysis tag-data-visualization-vi tag-dataanalytics tag-database tag-lag tag-lead tag-sql-vi tag-tu-hoc-data-analysis ast-article-single" id="post-649" itemtype="https://schema.org/CreativeWork" itemscope="itemscope"><div class="ast-post-format- single-layout-1">
+<header class="entry-header "><h1 class="entry-title" itemprop="headline">Hàm LAG và LEAD trong SQL</h1>
+<div class="entry-meta"> <span class="comments-link"> <a href="/ham-lag-va-lead-trong-sq/#respond">Leave a Comment</a> </span> / By <span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author"> <a title="View all posts by Tuan" href="/author/daogiatuank54/" rel="author" class="url fn n" itemprop="url"> <span class="author-name" itemprop="name">Tuan</span> </a> </span> / <span class="posted-on"><span class="published" itemprop="datePublished"> June 27, 2021</span><span class="updated" itemprop="dateModified"> August 17, 2021</span></span>
+</div></header><div class="entry-content clear" ast-blocks-layout="true" itemprop="text">
+<p>Hôm nay mình sẽ hướng dẫn các bạn sử dụng Hàm LAG và Hàm LEAD với ví dụ cụ thể để truy vấn dữ liệu theo dạng time-series ( dòng thời gian ).</p>
+<div id="ez-toc-container" class="ez-toc-v2_0_72 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
+<div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">Table of Contents</p></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1 ">
+<li class="ez-toc-page-1 ez-toc-heading-level-2">
+<a class="ez-toc-link ez-toc-heading-1" href="#Dinh_nghia_Ham_LAG_va_LEAD_trong_SQL_server" title="Định nghĩa Hàm LAG và LEAD trong SQL server">Định nghĩa Hàm LAG và LEAD trong SQL server</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-2" href="#Cu_phap" title="Cú pháp:">Cú pháp:</a></li></ul>
+</li>
+<li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-3" href="#Vi_du" title="Ví dụ:">Ví dụ:</a></li>
+<li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-4" href="#Ket" title="Kết">Kết</a></li>
+</ul></nav>
+</div>
+<h2 class="wp-block-heading">
+<span class="ez-toc-section" id="Dinh_nghia_Ham_LAG_va_LEAD_trong_SQL_server"></span>Định nghĩa Hàm LAG và LEAD trong SQL server<span class="ez-toc-section-end"></span>
+</h2>
+<p>Hàm LAG là 1 window function&nbsp; cho phép bạn truy vấn một hoặc nhiều dòng trong 1 bảng mà không cần nối bảng với chính nó. Vì dụ như bạn đang chọn 1 hàng, hàm LAG sẽ trả về giá trị hàng trước nó trong bảng. Để trả về giá trị hàng tiếp theo trong bảng, chúng ta sử dụng hàm LEAD.</p>
+<div class="wp-block-image"><figure class="aligncenter size-full"><img post-id="649" fifu-featured="1" fetchpriority="high" decoding="async" width="310" height="163" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hàm LAG và LEAD trong SQL" title="Hàm LAG và LEAD trong SQL" class="wp-image-698 ewww_webp" srcset="data:image/gif;base64,/ham-lag-va-lead-trong-sq/R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=%3D 1w" sizes="(max-width: 310px) 100vw, 310px" data-src-img="/wp-content/uploads/2021/08/download.png" data-src-webp="/wp-content/uploads/2021/08/download.png.webp" data-srcset-webp="/wp-content/uploads/2021/08/download.png.webp 310w, /wp-content/uploads/2021/08/download-300x158.png.webp 300w" data-srcset-img="/wp-content/uploads/2021/08/download.png 310w, /wp-content/uploads/2021/08/download-300x158.png 300w" data-eio="j"><noscript><img post-id="649" fifu-featured="1" fetchpriority="high" decoding="async" width="310" height="163" src="/wp-content/uploads/2021/08/download.png" alt="Hàm LAG và LEAD trong SQL" title="Hàm LAG và LEAD trong SQL" class="wp-image-698" srcset="/wp-content/uploads/2021/08/download.png 310w, /wp-content/uploads/2021/08/download-300x158.png 300w" sizes="(max-width: 310px) 100vw, 310px"></noscript>
+<figcaption>Học Lag and Lead trong SQL</figcaption></figure></div>
+<h3 class="wp-block-heading">
+<span class="ez-toc-section" id="Cu_phap"></span>Cú pháp:<span class="ez-toc-section-end"></span>
+</h3>
+<p>Cú pháp của hàm LAG trong SQL server là:&nbsp;</p>
+<div class="hcb_wrap"><pre class="prism line-numbers lang-sql" data-lang="SQL"><code>LAG ( expression [, offset [, default] ] )
+
+OVER ( [ query_partition_clause ] order_by_clause )</code></pre></div>
+<p>Cú pháp của hàm LEAD trong SQL server là:&nbsp;</p>
+<div class="hcb_wrap"><pre class="prism line-numbers lang-sql" data-lang="SQL"><code>LEAD  ( expression [, offset [, default] ] )
+
+OVER ( [ query_partition_clause ] order_by_clause )</code></pre></div>
+<p><strong>Chi tiết:&nbsp;</strong></p>
+<p>expression</p>
+<p>Một biểu thức có thể chứa các hàm lập sẵn ( sum, …) nhưng không được chứa bất kì hàm phân tích nào.&nbsp;</p>
+<p>Offset:&nbsp;</p>
+<p>Tùy chọn, Đây là phần lệch tính từ hàng hiện tại trong bảng, nếu tham số này bị bỏ qua, mặc định giá trị là 1.</p>
+<p>default</p>
+<p>Tùy chọn, Đây là giá trị được trả về nếu giá trị phần lệch chạy khỏi bảng. Nếu trường này để trống, giá trị mặc định sẽ là null.</p>
+<p>order_by_clause:</p>
+<p>Không bắt buộc. Nó được sử dụng để sắp xếp dữ liệu trong mỗi phân vùng.</p>
+<p>query_partition_clause</p>
+<p>Không bắt buộc. Nó được sử dụng để phân vùng kết quả thành các nhóm dựa trên một hoặc nhiều biểu thức.</p>
+<p>order_by_clause:&nbsp;</p>
+<p>Không bắt buộc. Nó được sử dụng để sắp xếp dữ liệu trong mỗi phân vùng.</p>
+<h2 class="wp-block-heading">
+<span class="ez-toc-section" id="Vi_du"></span>Ví dụ:<span class="ez-toc-section-end"></span>
+</h2>
+<p>Cho một bảng chứa cách hoạt động của người dùng 1 app như sau:</p>
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>date_key</td>
+<td>event_name</td>
+<td>customer_id</td>
+</tr>
+<tr>
+<td>5/29/2021</td>
+<td>view</td>
+<td>7424</td>
+</tr>
+<tr>
+<td>5/13/2021</td>
+<td>view</td>
+<td>7426</td>
+</tr>
+<tr>
+<td>5/13/2021</td>
+<td>view</td>
+<td>7426</td>
+</tr>
+<tr>
+<td>5/27/2021</td>
+<td>search</td>
+<td>7425</td>
+</tr>
+<tr>
+<td>5/13/2021</td>
+<td>register</td>
+<td>7426</td>
+</tr>
+<tr>
+<td>5/13/2021</td>
+<td>add_to_cart</td>
+<td>7425</td>
+</tr>
+<tr>
+<td>5/13/2021</td>
+<td>add_to_cart</td>
+<td>7426</td>
+</tr>
+<tr>
+<td>5/15/2021</td>
+<td>view</td>
+<td>7425</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>search</td>
+<td>7424</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>purchase</td>
+<td>7424</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>purchase</td>
+<td>7428</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>register</td>
+<td>7425</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>add_to_cart</td>
+<td>7428</td>
+</tr>
+<tr>
+<td>5/14/2021</td>
+<td>app_installed</td>
+<td>7424</td>
+</tr>
+</tbody></table></figure><p>Và chúng ta chạy câu lệnh SQL sau:</p>
+<figure class="wp-block-table"><table><tbody><tr>
+<td>1 2 3</td>
+<td>
+<strong>SELECT </strong>customer_id, date_key, event_name, <strong>LAG</strong> (event_name,1) <strong>OVER</strong> (<strong>ORDER BY</strong> event_name) <strong>AS</strong> near_last_event_name <strong>FROM</strong> example1&nbsp; <strong>GROUP BY</strong> customer_id</td>
+</tr></tbody></table></figure><p>Nó sẽ trả về kết quả sau:</p>
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>customer_id</td>
+<td>date_key</td>
+<td>event_name</td>
+<td>near_last_event_name</td>
+</tr>
+<tr>
+<td>7428</td>
+<td>5/14/2021</td>
+<td>purchase</td>
+<td>null</td>
+</tr>
+<tr>
+<td>7425</td>
+<td>5/27/2021</td>
+<td>search</td>
+<td>purchase</td>
+</tr>
+<tr>
+<td>7424</td>
+<td>5/29/2021</td>
+<td>view</td>
+<td>search</td>
+</tr>
+<tr>
+<td>7426</td>
+<td>5/13/2021</td>
+<td>view</td>
+<td>view</td>
+</tr>
+</tbody></table></figure><p>Trong ví dụ này, hàm&nbsp;LAG đã sắp xếp theo thứ tự thời gian tất cả các hoạt động&nbsp;trong bảng khách hàng&nbsp;và sau đó trả về hoạt động gần nhất kể từ sử dụng&nbsp;offset&nbsp;là 1.</p>
+<p>Nếu sử dụng&nbsp;offset&nbsp;bằng 2 thay vào đó, nó sẽ trả lại hành động gần thứ 2 trước hành động cuối.&nbsp;</p>
+<p>Tương tự với hàm LEAD, Ta thử sử dụng&nbsp;Partitions cho bảng sau:</p>
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>&nbsp;Name&nbsp;</td>
+<td>&nbsp;Team&nbsp;</td>
+<td>&nbsp;Salary&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Jae Crowder&nbsp;</td>
+<td>&nbsp;Boston Celtics&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6,796,117&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Amir Johnson&nbsp;</td>
+<td>&nbsp;Boston Celtics&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; 12,000,000&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Jared Sullinger&nbsp;</td>
+<td>&nbsp;Boston Celtics&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2,569,260&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Isaiah Thomas&nbsp;</td>
+<td>&nbsp;Boston Celtics&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6,912,869&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Bojan Bogdanovic&nbsp;</td>
+<td>&nbsp;Brooklyn Nets&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3,425,510&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Markel Brown&nbsp;</td>
+<td>&nbsp;Brooklyn Nets&nbsp;</td>
+<td>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 845,059&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Rondae Hollis-Jefferson&nbsp;</td>
+<td>&nbsp;Brooklyn Nets&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1,335,480&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Brook Lopez&nbsp;</td>
+<td>&nbsp;Brooklyn Nets&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; 19,689,000&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Al Horford&nbsp;</td>
+<td>&nbsp;Atlanta Hawks&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; 12,000,000&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Kyle Korver&nbsp;</td>
+<td>&nbsp;Atlanta Hawks&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5,746,479&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Dennis Schroder&nbsp;</td>
+<td>&nbsp;Atlanta Hawks&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1,763,400&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Jeff Teague&nbsp;</td>
+<td>&nbsp;Atlanta Hawks&nbsp;</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8,000,000&nbsp;</td>
+</tr>
+</tbody></table></figure><p>Mệnh đề&nbsp;truy vấn&nbsp;partition&nbsp;để trả lại mức lương cao nhất tiếp theo cho mỗi cầu&nbsp; thủ nba trong team, Nhập câu lệnh SQL sau:</p>
+<figure class="wp-block-table"><table><tbody><tr>
+<td>1 2 3</td>
+<td>SELECT team, name, salary, LEAD (salary,1) OVER (PARTITION BY TEAM ORDER BY salary) AS next_highest_salary FROM salary</td>
+</tr></tbody></table></figure><p>Nó sẽ trả về kết quả sau:</p>
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td><strong>Team</strong></td>
+<td><strong>Name</strong></td>
+<td><strong>Salary</strong></td>
+<td><strong>next_highest_salary</strong></td>
+</tr>
+<tr>
+<td>Atlanta Hawks</td>
+<td>Dennis Schroder</td>
+<td>1763400</td>
+<td>5746479</td>
+</tr>
+<tr>
+<td>Atlanta Hawks</td>
+<td>Kyle Korver</td>
+<td>5746479</td>
+<td>8000000</td>
+</tr>
+<tr>
+<td>Atlanta Hawks</td>
+<td>Jeff Teague</td>
+<td>8000000</td>
+<td>12000000</td>
+</tr>
+<tr>
+<td>Atlanta Hawks</td>
+<td>Al Horford</td>
+<td>12000000</td>
+<td>null</td>
+</tr>
+<tr>
+<td>Boston Celtics</td>
+<td>Jared Sullinger</td>
+<td>2569260</td>
+<td>6796117</td>
+</tr>
+<tr>
+<td>Boston Celtics</td>
+<td>Jae Crowder</td>
+<td>6796117</td>
+<td>6912869</td>
+</tr>
+<tr>
+<td>Boston Celtics</td>
+<td>Isaiah Thomas</td>
+<td>6912869</td>
+<td>12000000</td>
+</tr>
+<tr>
+<td>Boston Celtics</td>
+<td>Amir Johnson</td>
+<td>12000000</td>
+<td>null</td>
+</tr>
+<tr>
+<td>Brooklyn Nets</td>
+<td>Markel Brown</td>
+<td>845059</td>
+<td>1335480</td>
+</tr>
+<tr>
+<td>Brooklyn Nets</td>
+<td>Rondae Hollis-Jefferson</td>
+<td>1335480</td>
+<td>3425510</td>
+</tr>
+<tr>
+<td>Brooklyn Nets</td>
+<td>Bojan Bogdanovic</td>
+<td>3425510</td>
+<td>19689000</td>
+</tr>
+<tr>
+<td>Brooklyn Nets</td>
+<td>Brook Lopez</td>
+<td>19689000</td>
+<td>null</td>
+</tr>
+</tbody></table></figure><h2 class="wp-block-heading">
+<span class="ez-toc-section" id="Ket"></span>Kết<span class="ez-toc-section-end"></span>
+</h2>
+<p>Như vậy là mình đã trình bày xong phần ứng dụng lead và lag vào phân tích dữ liệu, nếu các bạn thấy hữu ích hãy share bài này nhé.</p>
+</div>
+</div></article><nav class="navigation post-navigation" role="navigation" aria-label="Posts"> <span class="screen-reader-text">Post navigation</span><div class="nav-links">
+<div class="nav-previous"><a href="/python-rat-can-ban-chia-se-tai-lieu/" rel="prev"><span class="ast-left-arrow">&larr;</span> Previous Post</a></div>
+<div class="nav-next"><a href="/tai-lieu-tu-hoc-python-data-science/" rel="next">Next Post <span class="ast-right-arrow">&rarr;</span></a></div>
+</div></nav><div id="comments" class="comments-area"><div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/ham-lag-va-lead-trong-sq/#respond" style="display:none;">Cancel Reply</a></small>
+</h3>
+<p class="must-log-in">You must be <a href="/wp-login.php?redirect_to=https%3A%2F%2F%2Fham-lag-va-lead-trong-sq%2F">logged in</a> to post a comment.</p>
+</div></div></main></div>
+<div class="widget-area secondary" id="secondary" itemtype="https://schema.org/WPSideBar" itemscope="itemscope"><div class="sidebar-main">
+<aside id="recent-posts-widget-with-thumbnails-10" class="widget recent-posts-widget-with-thumbnails"><div id="rpwwt-recent-posts-widget-with-thumbnails-10" class="rpwwt-widget">
+<h2 class="widget-title">Nội dung khác</h2>
+<nav role="navigation" aria-label="Nội dung khác"><ul><li><a href="/notebooklm-la-gi/"><img post-id="1231" fifu-featured="1" width="300" height="157" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-300x180 size-300x180 wp-post-image ewww_webp" alt="NotebookLM là gì?" title="NotebookLM là gì?" decoding="async" loading="lazy" data-src-img="/wp-content/uploads/2024/12/notebook_lm_share-1024x535.png" data-src-webp="/wp-content/uploads/2024/12/notebook_lm_share-1024x535.png.webp" data-eio="j"><noscript><img post-id="1231" fifu-featured="1" width="300" height="157" src="/wp-content/uploads/2024/12/notebook_lm_share-1024x535.png" class="attachment-300x180 size-300x180 wp-post-image" alt="NotebookLM là gì?" title="NotebookLM là gì?" decoding="async" loading="lazy"></noscript>
+<span class="rpwwt-post-title">NotebookLM là gì?</span></a></li></ul></nav>
+</div></aside><aside id="custom_html-5" class="widget_text widget widget_custom_html"><h2 class="widget-title">Sponsored</h2>
+<div class="textwidget custom-html-widget">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="cee460d1067b67e46917fdc2-text/javascript"></script>  <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5877339755641507" data-ad-slot="6184728575"></ins> <script type="cee460d1067b67e46917fdc2-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></aside>
+</div></div>
+</div></div>
+<footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon"><div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder"><div class="ast-builder-grid-row-container-inner"><div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row"><div class="site-footer-below-section-1 site-footer-section site-footer-section-1"><div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder"><div class="ast-footer-copyright"><p>Copyright &copy; 2025 Tuan | ANALYTIC | Powered by <a href="https://wpastra.com/" rel="nofollow noopener" target="_blank">Astra WordPress Theme</a></p></div></div></div></div></div></div></footer>
+</div>
+<div id="ast-scroll-top" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both"> <span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path> </svg></span> <span class="screen-reader-text">Scroll to Top</span>
+</div> <script type="application/ld+json" id="slim-seo-schema">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"/#website","url":"/","name":"Tuan | ANALYTIC","description":"Sharing ideas and knowledge","inLanguage":"en-US","potentialAction":{"@id":"/#searchaction"},"publisher":{"@id":"/#organization"}},{"@type":"SearchAction","@id":"/#searchaction","target":"/?s={search_term_string}","query-input":"required name=search_term_string"},{"@type":"BreadcrumbList","name":"Breadcrumbs","@id":"/ham-lag-va-lead-trong-sq/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"/"},{"@type":"ListItem","position":2,"name":"Phân tích dữ liệu","item":"/category/analytic-vi/"},{"@type":"ListItem","position":3,"name":"CSDL - Database","item":"/category/analytic-vi/csdl-database/"},{"@type":"ListItem","position":4,"name":"Hàm LAG và LEAD trong SQL"}]},{"@type":"WebPage","@id":"/ham-lag-va-lead-trong-sq/#webpage","url":"/ham-lag-va-lead-trong-sq/","inLanguage":"en-US","name":"Hàm LAG và LEAD trong SQL – Tuan | ANALYTIC","description":"Hôm nay mình sẽ hướng dẫn các bạn sử dụng Hàm LAG và Hàm LEAD với ví dụ cụ thể để truy vấn dữ liệu theo dạng time-series ( dòng thời gian ). Định nghĩa Hàm LAG","datePublished":"2021-06-27T07:20:40+00:00","dateModified":"2021-08-17T02:09:24+00:00","isPartOf":{"@id":"/#website"},"breadcrumb":{"@id":"/ham-lag-va-lead-trong-sq/#breadcrumblist"},"potentialAction":{"@id":"/ham-lag-va-lead-trong-sq/#readaction"},"primaryImageOfPage":{"@id":"/ham-lag-va-lead-trong-sq/#thumbnail"},"image":{"@id":"/ham-lag-va-lead-trong-sq/#thumbnail"}},{"@type":"ReadAction","@id":"/ham-lag-va-lead-trong-sq/#readaction","target":"/ham-lag-va-lead-trong-sq/"},{"@type":"Organization","@id":"/#organization","url":"/","name":"Tuan | ANALYTIC"},{"@type":"ImageObject","@id":"/ham-lag-va-lead-trong-sq/#thumbnail","url":"/wp-content/uploads/2021/08/download.png","contentUrl":"/wp-content/uploads/2021/08/download.png"},{"@type":"Article","@id":"/ham-lag-va-lead-trong-sq/#article","url":"/ham-lag-va-lead-trong-sq/","headline":"Hàm LAG và LEAD trong SQL","datePublished":"2021-06-27T07:20:40+00:00","dateModified":"2021-08-17T02:09:24+00:00","wordCount":967,"keywords":["data analysis","data visualization","dataanalytics","database","lag","lead","sql","tự học data analysis"],"articleSection":["CSDL - Database","Database","Phân tích dữ liệu","Về SQL"],"isPartOf":{"@id":"/ham-lag-va-lead-trong-sq/#webpage"},"mainEntityOfPage":{"@id":"/ham-lag-va-lead-trong-sq/#webpage"},"image":{"@id":"/ham-lag-va-lead-trong-sq/#thumbnail"},"publisher":{"@id":"/#organization"},"author":{"@id":"/#/schema/person/8d45c43643669fea13ffb5b78b3d6190"}},{"@type":"Person","@id":"/#/schema/person/8d45c43643669fea13ffb5b78b3d6190","url":"","name":"Tuan","image":"/wp-content/uploads/2021/02/1573570784816-1-96x96.jpeg"}]}</script> <div id="fb-root"></div> <script id="astra-theme-js-js-extra" type="cee460d1067b67e46917fdc2-text/javascript">var astra = {"break_point":"921","isRtl":"","is_scroll_to_id":"1","is_scroll_to_top":"1"};</script> <script id="q2w3_fixed_widget-js-extra" type="cee460d1067b67e46917fdc2-text/javascript">var q2w3_sidebar_options = [{"sidebar":"sidebar-1","use_sticky_position":false,"margin_top":80,"margin_bottom":0,"stop_elements_selectors":"","screen_max_width":0,"screen_max_height":0,"widgets":["#recent-posts-widget-with-thumbnails-10","#custom_html-5"]}];</script> <script id="hcb-script-js-extra" type="cee460d1067b67e46917fdc2-text/javascript">var hcbVars = {"showCopyBtn":"1","copyBtnLabel":"Copy code to clipboard"};</script> <script id="fifu-json-ld-js-extra" type="cee460d1067b67e46917fdc2-text/javascript">var fifuJsonLd = {"url":"\/wp-content\/uploads\/2021\/08\/download.png"};</script> <script type="cee460d1067b67e46917fdc2-text/javascript">/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script> <script defer src="/wp-content/cache/autoptimize/js/autoptimize_3fb17b858005d0adddd45ceacf5b248e.js" type="cee460d1067b67e46917fdc2-text/javascript"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="cee460d1067b67e46917fdc2-|49" defer></script>
+</body>
+</html>
