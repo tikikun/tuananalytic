@@ -50,11 +50,19 @@ thin/no-value pages from the index so the domain clears the quality bar.
 2. **Rewrote `robots.txt`** (was 1 byte) with Allow-all, disallow of
    `/wp-content/plugins/` and `/cdn-cgi/`, and a `Sitemap:` reference.
 
+3. **Generated `sitemap.xml`** listing only the 48 indexable pages.
+   Auto-excludes: pages with `content="noindex"` and redirect stubs
+   (`<title>Redirecting` / `http-equiv="refresh"`, e.g. `/5/`).
+   Homepage priority 1.0, all other pages 0.8, `lastmod` from file mtime.
+   Referenced from `robots.txt` as `https://tuananalytic.com/sitemap.xml`.
+
 ### Verified
 - Homepage (`index.html`) and good tutorials (e.g. `case-when-trong-sql`)
   remain **indexable** (robots meta unchanged).
 - Thin/archive pages now carry `content="noindex, follow, ..."`.
 - `grep -rl 'content="noindex' --include=index.html .` → 50 pages.
+- `sitemap.xml` validated as well-formed XML; contains 48 `<url>` entries
+  (matches indexable set minus the `/5/` redirect stub).
 
 ### NOT indexable = do not add these back to the index
 The 50 pages above are intentionally `noindex`. If you later expand a thin post
@@ -67,6 +75,15 @@ After Google recrawls, the indexed set should be ~30 substantial tutorials.
 Optionally expand borderline posts before requesting another review.
 
 ---
+
+## Regenerating sitemap.xml
+Re-run the generator whenever pages are added/removed or noindex status changes.
+It walks `**/index.html`, skips any file containing `content="noindex"` or a
+redirect stub, and writes `sitemap.xml` (domain `https://tuananalytic.com`).
+After regenerating, validate with:
+`python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"`.
+Keep it in sync with the noindex changes above — a sitemap should never list
+noindexed URLs (that sends Google mixed signals).
 
 ## How the robots meta is templated
 All pages contain the exact string:
