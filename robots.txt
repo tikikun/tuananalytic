@@ -1,1 +1,13 @@
- 
+# robots.txt for tuananalytic.com
+User-agent: *
+Allow: /
+
+# Block WordPress internals that hold no reader value
+Disallow: /wp-content/plugins/
+Disallow: /cdn-cgi/
+
+# Archive, tag, author and pagination pages are also marked noindex in-page.
+# They are left crawlable (not Disallowed) so Google can see the noindex tag
+# and drop them from the index while still following internal links.
+
+Sitemap: https://tuananalytic.com/sitemap.xml
